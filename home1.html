@@ -20,6 +20,19 @@
             --dark: #133B40;
         }
 
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+        }
+
         .btn-custom {
             border-color: var(--primary);
             color: var(--primary);
@@ -34,13 +47,6 @@
 
         .text-special {
             color: var(--primary);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
         }
 
         .navbar-brand {
@@ -156,11 +162,11 @@
 
         .hamburger-menu .hamburger-inner {
             position: absolute;
-            right: -80px;
-            top: -80px;
+            right: 0px;
+            top: 0px;
             z-index: 100;
-            width: 200px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             /*  height: 200px;*/
             background: #ffffff;
             border-radius: 50% 50% 50% 50%;
@@ -175,8 +181,9 @@
 
         .hamburger-menu .hamburger-icon {
             position: absolute;
-            top: 135px;
+            top: 50px;
             left: 50px;
+            transform: translateX(-50%);
             width: 30px;
             height: 2px;
             background: var(--dark);
@@ -223,8 +230,9 @@
         }
 
         .hamburger-menu input:checked+.hamburger-inner .hamburger-icon {
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            -webkit-transform: translateX(-50%) rotate(45deg);
         }
 
         .hamburger-menu input:checked+.hamburger-inner .hamburger-icon:after {
@@ -278,15 +286,7 @@
             color: var(--primary);
         }
 
-        /*
 
-@media (max-width: 575px) {
-  .hamburger-menu label .hamburger-inner {
-    right: -100px;
-    top: -100px;
-  }
-}
-*/
         @media(min-width: 991px) {
             .hamburger-menu {
                 display: none;
@@ -339,7 +339,6 @@
                 flex-direction: row;
             }
         }
-
     </style>
 
 </head>
@@ -358,8 +357,7 @@
     </div>
 
 
-    <!-- =======================
-	hamburger menu -->
+    <!-- hamburger menu -->
     <div class="hamburger-menu">
         <label>
             <input type='checkbox'>
@@ -374,8 +372,7 @@
             </ul>
         </label>
     </div>
-    <!-- =======================
-	hamburger menu -->
+    <!-- hamburger menu -->
 
 
     <nav class="navbar navbar-light">
@@ -412,8 +409,6 @@
 
     </nav>
 
-    <!--       <img src="line.png" alt="">-->
-
     <section class="p-4">
         <div class="container-fluid p-4">
             <div class="row p-4 header">
@@ -446,7 +441,6 @@
         </div>
     </section>
 
-    <div class="divider"></div>
 
 
     <section class="p-4 service">
@@ -481,8 +475,7 @@
 
 
 
-    <!-- =======================
-	About us -->
+    <!-- About us -->
     <section class="p-4 bg-grad">
         <div class="container h-100">
             <div class="row">
@@ -501,9 +494,8 @@
         </div>
     </section>
 
-
-
-
+    <br>
+    <br>
 
 
 
@@ -518,8 +510,5 @@
             document.documentElement.style.setProperty('--primary-light', color);
             document.documentElement.style.setProperty('--primary', btnColor);
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
