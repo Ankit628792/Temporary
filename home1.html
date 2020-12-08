@@ -123,7 +123,6 @@
                 width: 200px;
                 height: 75px;
                 padding: 0;
-                margin-top: -50px;
             }
 
             .header {
@@ -155,7 +154,7 @@
         }
 
         /*    Hamburger Menu*/
-     .hamburger-menu {
+        .hamburger-menu {
             position: absolute;
             top: 0;
             left: 0;
@@ -343,13 +342,11 @@
                 flex-direction: row;
             }
         }
-        section{
+
+        section {
             min-height: 90vh;
             display: flex;
             align-items: center;
-        }
-        .update{
-            background:  linear-gradient(45deg , var(--white) 0%, var(--primary-light) 90%);
         }
     </style>
 
@@ -523,16 +520,15 @@
             document.documentElement.style.setProperty('--primary-light', color);
             document.documentElement.style.setProperty('--primary', btnColor);
             document.documentElement.style.setProperty('--white', '#fff');
+            document.querySelector('.text-special').style.setProperty('color', btnColor);
         }
-        
-        function mainColor(color1,color2) {
+
+        function mainColor(color1, color2) {
             document.documentElement.style.setProperty('--primary-light', color2);
             document.documentElement.style.setProperty('--white', color1);
             document.querySelector('.text-special').style.setProperty('color', '#fff');
-             
+
         }
         mainColor('#ff9caa', '#EC5961');
-        
-        
     </script>
 </body></html>
