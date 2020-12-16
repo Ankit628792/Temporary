@@ -21,6 +21,8 @@
         body::-webkit-scrollbar {
   display: none;
 }
+
+@media(max-width: 400px){
         input{
             width: 250px;
             margin: 5px;
@@ -111,3 +113,4 @@
             padding: 10px;
         }
         
+}
