@@ -1,0 +1,802 @@
+[
+    {
+        "rank": "1",
+        "competitor": "Christian COLEMAN",
+        "dob": "06 MAR 1996",
+        "nation": "USA",
+        "score": "1429",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "2",
+        "competitor": "Justin GATLIN",
+        "dob": "10 FEB 1982",
+        "nation": "USA",
+        "score": "1428",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "3",
+        "competitor": "Akani SIMBINE",
+        "dob": "21 SEP 1993",
+        "nation": "RSA",
+        "score": "1383",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "4",
+        "competitor": "Zharnel HUGHES",
+        "dob": "13 JUL 1995",
+        "nation": "GBR",
+        "score": "1379",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "5",
+        "competitor": "Yohan BLAKE",
+        "dob": "26 DEC 1989",
+        "nation": "JAM",
+        "score": "1376",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "6",
+        "competitor": "André DE GRASSE",
+        "dob": "10 NOV 1994",
+        "nation": "CAN",
+        "score": "1366",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "7",
+        "competitor": "Michael RODGERS",
+        "dob": "24 APR 1985",
+        "nation": "USA",
+        "score": "1330",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "8",
+        "competitor": "Aaron BROWN",
+        "dob": "27 MAY 1992",
+        "nation": "CAN",
+        "score": "1307",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "9",
+        "competitor": "Filippo TORTU",
+        "dob": "15 JUN 1998",
+        "nation": "ITA",
+        "score": "1293",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "10",
+        "competitor": "Adam GEMILI",
+        "dob": "06 OCT 1993",
+        "nation": "GBR",
+        "score": "1293",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "11",
+        "competitor": "Arthur CISSÉ",
+        "dob": "29 DEC 1996",
+        "nation": "CIV",
+        "score": "1291",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "12",
+        "competitor": "Lamont Marcell JACOBS",
+        "dob": "26 SEP 1994",
+        "nation": "ITA",
+        "score": "1285",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "13",
+        "competitor": "Tyquendo TRACEY",
+        "dob": "10 JUN 1993",
+        "nation": "JAM",
+        "score": "1281",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "14",
+        "competitor": "Paulo André CAMILO DE OLIVEIRA",
+        "dob": "20 AUG 1998",
+        "nation": "BRA",
+        "score": "1279",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "15",
+        "competitor": "Yoshihide KIRYU",
+        "dob": "15 DEC 1995",
+        "nation": "JPN",
+        "score": "1269",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "16",
+        "competitor": "Ronnie BAKER",
+        "dob": "15 OCT 1993",
+        "nation": "USA",
+        "score": "1268",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "17",
+        "competitor": "Demek KEMP",
+        "dob": "26 APR 1996",
+        "nation": "USA",
+        "score": "1264",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "18",
+        "competitor": "Zhenye XIE",
+        "dob": "17 AUG 1993",
+        "nation": "CHN",
+        "score": "1260",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "19",
+        "competitor": "Jimmy VICAUT",
+        "dob": "27 FEB 1992",
+        "nation": "FRA",
+        "score": "1259",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "20",
+        "competitor": "Chijindu UJAH",
+        "dob": "05 MAR 1994",
+        "nation": "GBR",
+        "score": "1252",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "21",
+        "competitor": "Jak Ali HARVEY",
+        "dob": "04 MAY 1989",
+        "nation": "TUR",
+        "score": "1229",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "22",
+        "competitor": "Cejhae GREENE",
+        "dob": "06 OCT 1995",
+        "nation": "ANT",
+        "score": "1229",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "23",
+        "competitor": "Cravon GILLESPIE",
+        "dob": "31 JUL 1996",
+        "nation": "USA",
+        "score": "1224",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "24",
+        "competitor": "Christopher BELCHER",
+        "dob": "29 JAN 1994",
+        "nation": "USA",
+        "score": "1224",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "25",
+        "competitor": "Cameron BURRELL",
+        "dob": "11 SEP 1994",
+        "nation": "USA",
+        "score": "1224",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "26",
+        "competitor": "Yuki KOIKE",
+        "dob": "13 MAY 1995",
+        "nation": "JPN",
+        "score": "1217",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "27",
+        "competitor": "Raymond EKEVWO",
+        "dob": "23 MAR 1999",
+        "nation": "NGR",
+        "score": "1215",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "28",
+        "competitor": "Rohan BROWNING",
+        "dob": "31 DEC 1997",
+        "nation": "AUS",
+        "score": "1214",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "29",
+        "competitor": "Rodrigo DO NASCIMENTO",
+        "dob": "26 SEP 1994",
+        "nation": "BRA",
+        "score": "1213",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "30",
+        "competitor": "Ján VOLKO",
+        "dob": "02 NOV 1996",
+        "nation": "SVK",
+        "score": "1208",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "31",
+        "competitor": "Hassan TAFTIAN",
+        "dob": "04 MAY 1993",
+        "nation": "IRI",
+        "score": "1203",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "32",
+        "competitor": "Felipe BARDI DOS SANTOS",
+        "dob": "08 OCT 1998",
+        "nation": "BRA",
+        "score": "1202",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "33",
+        "competitor": "Mouhamadou FALL",
+        "dob": "25 FEB 1992",
+        "nation": "FRA",
+        "score": "1201",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "34",
+        "competitor": "Abdul Hakim SANI BROWN",
+        "dob": "06 MAR 1999",
+        "nation": "JPN",
+        "score": "1201",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "35",
+        "competitor": "Edward OSEI-NKETIA",
+        "dob": "08 MAY 2001",
+        "nation": "NZL",
+        "score": "1199",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "36",
+        "competitor": "Joris VAN GOOL",
+        "dob": "04 APR 1998",
+        "nation": "NED",
+        "score": "1198",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "37",
+        "competitor": "Emre Zafer BARNES",
+        "dob": "07 NOV 1988",
+        "nation": "TUR",
+        "score": "1196",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "38",
+        "competitor": "Usheoritse ITSEKIRI",
+        "dob": "31 JAN 1998",
+        "nation": "NGR",
+        "score": "1194",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "39",
+        "competitor": "Ojie EDOBURUN",
+        "dob": "02 JUN 1996",
+        "nation": "GBR",
+        "score": "1193",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "40",
+        "competitor": "Gavin SMELLIE",
+        "dob": "26 JUN 1986",
+        "nation": "CAN",
+        "score": "1192",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "41",
+        "competitor": "Isiah YOUNG",
+        "dob": "05 JAN 1990",
+        "nation": "USA",
+        "score": "1192",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "42",
+        "competitor": "Shuhei TADA",
+        "dob": "24 JUN 1996",
+        "nation": "JPN",
+        "score": "1191",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "43",
+        "competitor": "Kendal WILLIAMS",
+        "dob": "23 SEP 1995",
+        "nation": "USA",
+        "score": "1188",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "44",
+        "competitor": "Kevin KRANZ",
+        "dob": "20 JUN 1998",
+        "nation": "GER",
+        "score": "1188",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "45",
+        "competitor": "Chun-Han YANG",
+        "dob": "01 JAN 1997",
+        "nation": "TPE",
+        "score": "1187",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "46",
+        "competitor": "Alex WILSON",
+        "dob": "19 SEP 1990",
+        "nation": "SUI",
+        "score": "1187",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "47",
+        "competitor": "Michael POHL",
+        "dob": "18 NOV 1989",
+        "nation": "GER",
+        "score": "1184",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "48",
+        "competitor": "Asafa POWELL",
+        "dob": "23 NOV 1982",
+        "nation": "JAM",
+        "score": "1183",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "49",
+        "competitor": "Zhiqiang WU",
+        "dob": "10 APR 1994",
+        "nation": "CHN",
+        "score": "1179",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "50",
+        "competitor": "Bryce ROBINSON",
+        "dob": "13 NOV 1993",
+        "nation": "USA",
+        "score": "1177",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "51",
+        "competitor": "Jack HALE",
+        "dob": "22 MAY 1998",
+        "nation": "AUS",
+        "score": "1177",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "52",
+        "competitor": "Bismark BOATENG",
+        "dob": "15 MAR 1992",
+        "nation": "CAN",
+        "score": "1176",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "53",
+        "competitor": "Churandy MARTINA",
+        "dob": "03 JUL 1984",
+        "nation": "NED",
+        "score": "1176",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "54",
+        "competitor": "Mario BURKE",
+        "dob": "18 MAR 1997",
+        "nation": "BAR",
+        "score": "1175",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "55",
+        "competitor": "Andrew FISHER",
+        "dob": "15 DEC 1991",
+        "nation": "BRN",
+        "score": "1173",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "56",
+        "competitor": "Jan VELEBA",
+        "dob": "06 DEC 1986",
+        "nation": "CZE",
+        "score": "1171",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "57",
+        "competitor": "Bingtian SU",
+        "dob": "29 AUG 1989",
+        "nation": "CHN",
+        "score": "1170",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "58",
+        "competitor": "Zhouzheng XU",
+        "dob": "26 DEC 1995",
+        "nation": "CHN",
+        "score": "1170",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "59",
+        "competitor": "Carlos NASCIMENTO",
+        "dob": "12 OCT 1994",
+        "nation": "POR",
+        "score": "1169",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "60",
+        "competitor": "Vitor Hugo DOS SANTOS",
+        "dob": "01 FEB 1996",
+        "nation": "BRA",
+        "score": "1167",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "61",
+        "competitor": "Andrew ROBERTSON",
+        "dob": "17 DEC 1990",
+        "nation": "GBR",
+        "score": "1166",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "62",
+        "competitor": "Jeff DEMPS",
+        "dob": "08 JAN 1990",
+        "nation": "USA",
+        "score": "1166",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "63",
+        "competitor": "Thando DLODLO",
+        "dob": "22 APR 1999",
+        "nation": "RSA",
+        "score": "1165",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "64",
+        "competitor": "Enoch ADEGOKE",
+        "dob": "08 MAR 2000",
+        "nation": "NGR",
+        "score": "1165",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "65",
+        "competitor": "Harry AIKINES-ARYEETEY",
+        "dob": "29 AUG 1988",
+        "nation": "GBR",
+        "score": "1164",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "66",
+        "competitor": "Joseph Paul AMOAH",
+        "dob": "12 JAN 1997",
+        "nation": "GHA",
+        "score": "1163",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "67",
+        "competitor": "Henrik LARSSON",
+        "dob": "30 SEP 1999",
+        "nation": "SWE",
+        "score": "1162",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "68",
+        "competitor": "Taymir BURNET",
+        "dob": "01 OCT 1992",
+        "nation": "NED",
+        "score": "1162",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "69",
+        "competitor": "Shaun Phatutshedzo MASWANGANYI",
+        "dob": "01 FEB 2001",
+        "nation": "RSA",
+        "score": "1162",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "70",
+        "competitor": "Derick SILVA",
+        "dob": "23 APR 1998",
+        "nation": "BRA",
+        "score": "1161",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "71",
+        "competitor": "Devin QUINN",
+        "dob": "08 JUN 1996",
+        "nation": "USA",
+        "score": "1160",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "72",
+        "competitor": "Jackson WEBB",
+        "dob": "27 FEB 1997",
+        "nation": "USA",
+        "score": "1160",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "73",
+        "competitor": "Brandon CARNES",
+        "dob": "06 MAR 1995",
+        "nation": "USA",
+        "score": "1158",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "74",
+        "competitor": "Amaury GOLITIN",
+        "dob": "28 JAN 1997",
+        "nation": "FRA",
+        "score": "1158",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "75",
+        "competitor": "Aldemir JUNIOR",
+        "dob": "08 JUN 1992",
+        "nation": "BRA",
+        "score": "1158",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "76",
+        "competitor": "Julian REUS",
+        "dob": "29 APR 1988",
+        "nation": "GER",
+        "score": "1158",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "77",
+        "competitor": "Seye OGUNLEWE",
+        "dob": "30 AUG 1991",
+        "nation": "NGR",
+        "score": "1157",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "78",
+        "competitor": "Ameer WEBB",
+        "dob": "19 MAR 1991",
+        "nation": "USA",
+        "score": "1155",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "79",
+        "competitor": "Dominik KOPEĆ",
+        "dob": "05 MAR 1995",
+        "nation": "POL",
+        "score": "1153",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "80",
+        "competitor": "Jake DORAN",
+        "dob": "17 JUL 2000",
+        "nation": "AUS",
+        "score": "1152",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "81",
+        "competitor": "Zdeněk STROMŠÍK",
+        "dob": "25 NOV 1994",
+        "nation": "CZE",
+        "score": "1151",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "82",
+        "competitor": "Benjamin AZAMATI-KWAKU",
+        "dob": "14 JAN 1998",
+        "nation": "GHA",
+        "score": "1151",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "83",
+        "competitor": "Chederick VAN WYK",
+        "dob": "18 FEB 1995",
+        "nation": "RSA",
+        "score": "1149",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "84",
+        "competitor": "Richard KILTY",
+        "dob": "02 SEP 1989",
+        "nation": "GBR",
+        "score": "1146",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "85",
+        "competitor": "Silvan WICKI",
+        "dob": "13 FEB 1995",
+        "nation": "SUI",
+        "score": "1146",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "86",
+        "competitor": "Przemysław SŁOWIKOWSKI",
+        "dob": "20 NOV 1993",
+        "nation": "POL",
+        "score": "1146",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "87",
+        "competitor": "Simon MAGAKWE",
+        "dob": "14 MAY 1986",
+        "nation": "RSA",
+        "score": "1146",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "88",
+        "competitor": "Maurice EADDY",
+        "dob": "04 JUN 1995",
+        "nation": "USA",
+        "score": "1144",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "89",
+        "competitor": "Yazaldes NASCIMENTO",
+        "dob": "17 APR 1986",
+        "nation": "POR",
+        "score": "1144",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "90",
+        "competitor": "Warren FRASER",
+        "dob": "08 JUL 1991",
+        "nation": "BAH",
+        "score": "1142",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "91",
+        "competitor": "Henrico BRUINTJIES",
+        "dob": "16 JUL 1993",
+        "nation": "RSA",
+        "score": "1142",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "92",
+        "competitor": "Kukyoung KIM",
+        "dob": "19 APR 1991",
+        "nation": "KOR",
+        "score": "1141",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "93",
+        "competitor": "Hensley PAULINA",
+        "dob": "26 JUN 1993",
+        "nation": "NED",
+        "score": "1139",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "94",
+        "competitor": "Cravont CHARLESTON",
+        "dob": "02 JAN 1998",
+        "nation": "USA",
+        "score": "1139",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "95",
+        "competitor": "Samuel GORDON",
+        "dob": "05 OCT 1994",
+        "nation": "GBR",
+        "score": "1139",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "96",
+        "competitor": "Andrew HUDSON",
+        "dob": "14 DEC 1996",
+        "nation": "USA",
+        "score": "1138",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "97",
+        "competitor": "Diogo ANTUNES",
+        "dob": "02 NOV 1992",
+        "nation": "POR",
+        "score": "1137",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "98",
+        "competitor": "Oliver BROMBY",
+        "dob": "30 MAR 1998",
+        "nation": "GBR",
+        "score": "1136",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "99",
+        "competitor": "Jinsheng LIANG",
+        "dob": "12 JAN 1996",
+        "nation": "CHN",
+        "score": "1136",
+        "eventlist": "100m"
+    },
+    {
+        "rank": "100",
+        "competitor": "Keston BLEDMAN",
+        "dob": "08 MAR 1988",
+        "nation": "TTO",
+        "score": "1135",
+        "eventlist": "100m"
+    }
+]

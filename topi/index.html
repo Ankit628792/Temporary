@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Job</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        header{
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+        }
+        header input{
+            min-width: 400px;
+        }
+        .shadow{
+            box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+            max-width: 420px;
+            margin: 30px 10px;
+            border-radius: 10px;
+        }
+        h4{
+            font-weight: 600;
+        }
+        
+    </style>
+  </head>
+  <body>
+
+    <header>
+
+        <div class="inputBx">
+                <input type="text" name="jobname" class="form-control" placeholder="Type Something To Get Jobs Lists" />
+                <button class="btn btn-primary" onclick="addCode()">add</button>
+        </div>
+
+    </header>
+    <div class="container-fluid p-5">
+       <div id="result" class="row px-4 d-flex justify-content-around flex-wrap">
+           <div class="col-lg-4 py-4 px-5 shadow">
+                <h4>Backend Back Office Executive Chat Support Email Support</h4>
+                <h5 class="pt-2">Sankalp</h5>
+                <h5>Delhi, India</h5>
+                <p>Morning Shift-7AM To 3 PM.
+                    Food Court (Free meal Veg an d Non-Veg).
+                    (On the spot offer letter.).
+                    Your CV Selected For Back Office Data Entry Work.</p>
+                <a class="btn btn-outline-success mb-2" href="">Apply Now</a>
+           </div>
+           <div class="col-lg-4 py-4 px-5 shadow">
+                <h4>Backend Back Office Executive Chat Support Email Support</h4>
+                <h5 class="pt-2">Sankalp</h5>
+                <h5>Delhi, India</h5>
+                <p>Morning Shift-7AM To 3 PM.
+                    Food Court (Free meal Veg an d Non-Veg).
+                    (On the spot offer letter.).
+                    Your CV Selected For Back Office Data Entry Work.</p>
+                    <a class="btn btn-outline-success mb-2" href="">Apply Now</a>
+           </div>
+           <div class="col-lg-4 py-4 px-5 shadow">
+                <h4>Backend Back Office Executive Chat Support Email Support</h4>
+                <h5 class="pt-2">Sankalp</h5>
+                <h5>Delhi, India</h5>
+                <p>Morning Shift-7AM To 3 PM.
+                    Food Court (Free meal Veg an d Non-Veg).
+                    (On the spot offer letter.).
+                    Your CV Selected For Back Office Data Entry Work.</p>
+                    <a class="btn btn-outline-success mb-2" href="">Apply Now</a>
+           </div>
+          
+           </div>
+       </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script type="text/javascript" src="job.json"></script>
+    <script>
+
+fetch('job.json')
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
+
+        function addCode() {
+       document.getElementById('result').innerHTML += `
+       <div class="col-lg-4 py-4 px-5 shadow">
+                <h4>Backend Back Office Executive Chat Support Email Support</h4>
+                <h5 class="pt-2">Sankalp</h5>
+                <h5>Delhi, India</h5>
+                <p>Morning Shift-7AM To 3 PM.
+                    Food Court (Free meal Veg an d Non-Veg).
+                    (On the spot offer letter.).
+                    Your CV Selected For Back Office Data Entry Work.</p>
+                    <a class="btn btn-outline-success mb-2" href="">Apply Now</a>
+           </div>
+           `
+    }    
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+function jobData(){
+    jobList.map((job, index) => {
+        return (document.getElementById('result').innerHTML += `
+           <div class="col-lg-4 py-4 px-5 shadow">
+                    <h4>${job.title}</h4>
+                    <h5 class="pt-2">${job.company}</h5>
+                    <h5>${job.location}</h5>
+                    <p>${job.summary}</p>
+                        <a class="btn btn-outline-success mb-2" href="">Apply Now</a>
+               </div>
+               `)
+    })
+    
+    }
+    
+    jobData()
+    

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uhb</title>
+
+    <style>
+        body{
+            padding: 20px;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            font-size: 40px;
+            background: rgb(245, 218, 195);
+            padding: 20px;
+        }
+        p{
+            font-size: 20px;
+            background: rgb(203, 255, 246);
+            padding: 20px;
+        }
+        .btn{
+            padding: 10px 20px;
+            background: #f85d8f;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            box-shadow: 3px 3px 10px rgba(100,100,100,0.4);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background:  #f85d8f;
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+
+    <h1 id="heading">lorem Test</h1>
+    <p>This is a jquery class</p>
+    <button class="btn">Click here</button>
+<br><br>
+    <div class="box"></div>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+
+  <script>
+
+    //   $(document).action()
+
+    //   $(document).ready(function name(params) {
+    //       $('.btn').click(function () {
+    //           $('h1').hide();
+    //           $('p').hide();
+    //       })
+
+    //       $('.btn').mouseenter(function () {
+    //           $('h1').hide();
+    //           $('p').hide();
+    //       })
+          
+    //       $('.btn').keypress(function () {
+    //           $('h1').hide();
+    //           $('p').hide();
+    //       })
+          
+    //   });
+
+// Mutiple event handler
+      $(document).ready(function () {
+         $('.btn').click(function () {
+             $('.box').animate({
+                 right: '500px',
+                  opacity: 0.5,
+                   width: '200px',
+                }, 1000);
+            
+                $('.box').animate({
+                 left: '200px',
+                  opacity: 1,
+                   width: '200px',
+                }, 1000);
+
+                $('.box').animate({
+                 right: '500px',
+                  opacity: 0.5,
+                   height: '200px',
+                }, 1000);
+
+
+         });
+
+
+         $(document).click(function () {
+             $('.box').hide(1000, function () {
+                //  alert('You have hide the animation')
+             }
+             );
+         })
+      })
+     
+
+    //   $(selector).action();
+
+      $('.class');
+      $('#id');
+      $('tag');
+      $('*');
+
+
+
+
+  </script>
+</body>
+</html>
