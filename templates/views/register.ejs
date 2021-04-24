@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>
+        Register
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+
+    <style>
+        .container{
+            width: 100%;
+            height: 90vh;
+            display: grid;
+            place-items: center;
+        }
+        .signup{
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/navbar'); %>
+
+    <div class="uk-container uk-padding container">
+    <form id="demoForm" action="/register" method="POST" class="uk-form uk-padding signup">
+        
+        <div class="uk-column-1-2">
+
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="text" class="uk-input" name="firstname" placeholder="First Name" />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="text" class="uk-input" name="lastname" placeholder="Last Name" />
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-column-1-2">
+
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="email" class="uk-input" name="email" placeholder="Enter Your Email" />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="number" class="uk-input" name="phone" placeholder="Enter Your Contact Number" />
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-column-1-2">
+
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="password" class="uk-input" name="password" placeholder="Create Your Password" />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-controls">
+                    <input type="password" class="uk-input" name="confirm_password" placeholder="Confirm Password" />
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <label class="uk-form-label"></label>
+            <div class="uk-form-controls">
+                <button type="submit" class="uk-button uk-button-primary">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

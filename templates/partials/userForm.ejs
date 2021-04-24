@@ -1,0 +1,222 @@
+<style>
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
+.form-modal{
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    background: linear-gradient(90deg, #fcad8c 0%, #eb7874 99.99%, #eb7874 100%);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.form-modal .userforms{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,.1);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.form-modal .userforms .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.form-modal .userforms .user .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #ff0;
+    object-fit: cover;
+}
+.form-modal .userforms .user .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.form-modal .userforms .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+.form-modal .userforms .user .formBx form h2{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+.form-modal .userforms .user .formBx form input{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.form-modal .userforms .user .formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #677eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.form-modal .userforms .user .formBx form input[type="submit"]:hover{
+  background: #38ACEC;
+}
+.form-modal .userforms .user .formBx form .signup{
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.form-modal .userforms .user .formBx form .signup a{
+    font-weight: 700;
+    text-decoration: none;
+    color: #677eff;
+}
+.form-modal .userforms .signupBx{
+    pointer-events: none;
+}
+.form-modal .userforms.active .signupBx{
+    pointer-events: initial;
+}
+.form-modal .userforms .signupBx .formBx{
+    left: 100%;
+    transition: .5s;
+}
+.form-modal .userforms.active .signupBx .formBx{
+    left: 0;
+    transition: .5s;
+}
+.form-modal .userforms .signupBx .imgBx{
+    left: -100%;
+    transition: .5s;
+}
+.form-modal .userforms.active .signupBx .imgBx{
+    left: 0;
+    transition: .5s;
+}
+  
+.form-modal .userforms .signinBx .formBx{
+    left: 0;
+    transition: .5s;
+}
+.form-modal .userforms.active .signinBx .formBx{
+    left: 100%;
+    transition: .5s;
+}
+.form-modal .userforms .signinBx .imgBx{
+    left: 0;
+    transition: .5s;
+}
+.form-modal .userforms.active .signinBx .imgBx{
+    left: -100%;
+    transition: .5s;
+}
+
+.uk-modal.uk-open {
+        background-color: transparent;
+        overflow: hidden;
+    }
+.uk-modal-close-default{
+    color: #000;
+}
+
+   
+@media (max-width: 991px){
+    .form-modal .userforms{
+        max-width: 400px;
+    }
+    .form-modal .userforms .imgBx{
+        display: none;
+    }
+    .form-modal .userforms .user .formBx{
+        width: 100%;
+    }
+}
+</style>
+
+
+<div id="userlogs" class="uk-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body form-modal">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        
+        <div class="userforms">
+            <div class="user signinBx">
+            <div class="imgBx">
+                <img src="https://images.unsplash.com/photo-1612046037164-e6c2260277e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80">
+            </div>    
+            <div class="formBx">
+              <form action="/userlogin" method="POST">
+                  <h2>User's Sign In</h2>
+                <input type="email" name="email" placeholder="Enter Your Registered Email">
+                <input type="password" name="password" placeholder="Your Password">
+                <input type="submit" value="Login">
+                <p class="signup">Don't have an account ?<a onclick="toggleUserForm();"> Sign Up</a></p>
+                </form>
+            </div>
+            </div>
+                
+                <div class="user signupBx">    
+            <div class="formBx">
+              <form action="/userregister" method="POST">
+                  <h2>User's Sign Up </h2>
+                <input type="text" name="fullname" placeholder="Enter Your Name">
+                <input type="text" name="username" placeholder="Username">
+                <input type="email" name="email" placeholder="Enter Your Email">
+                <input type="password" name="password" placeholder="Create Your Password">
+                <input type="password" name="confirm_password" placeholder="Confirm Password">
+                <input type="submit" value="Sign Up">
+                <p class="signup">Already have an account ?<a onclick="toggleUserForm();"> Sign In</a></p>
+                </form>
+            </div>
+             <div class="imgBx">
+                <img src="https://images.unsplash.com/photo-1618191635333-7a6dfce0f9fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80">
+            </div>
+            </div>
+            </div>
+    </div>
+  </div>
+  
+
+  
+  
+  <script>
+  function toggleUserForm(){
+        var userforms = document.querySelector('.userforms');
+        userforms.classList.toggle('active');
+    }
+  </script>
+  

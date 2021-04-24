@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Profile</title>
+
+    <style>
+      input:focus{
+        border: 1px solid #333;
+        outline:thin
+      }
+    </style>
+  </head>
+  <body>
+    
+    <%- include('../partials/navbar', {log : authenticated.log,logRedirect: authenticated.logRedirect}); %>
+
+    <div class="container p-4">
+      <div class="row">
+        <h1>Doctor name</h1>
+      </div>
+      <div class="dropdown-divider my-4"></div>
+      <div class="row">
+          <div class="row d-flex justify-content-between">
+        <div class="col-lg-8 d-flex flex-column">
+            <input class="my-2 py-2 px-4" type="text" value="<%= user.FullName %>" readonly >
+            <input class="my-2 py-2 px-4" type="text" value="<%= user.Username %>" readonly>
+            <input class="my-2 py-2 px-4" type="text" value="<%= user.Email %>" readonly>
+        </div>
+        <div class="col-lg-4">
+           <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" width="100%" alt="">
+        </div>
+        </div>
+        <div id="buttons" class="row">
+
+          <button class="btn btn-outline-primary" onclick="edit()">Edit</button>
+          <a href="/updateprofile" class="btn btn-ouline-danger">Edit</a>
+        </div>
+      </div>
+    </div>
+
+<script>
+  var input = document.querySelectorAll("input");
+  function edit() {
+    for (let i = 0; i < input.length; i++) {
+  input[i].removeAttribute('readonly');
+}
+
+var buttons = document.getElementById('buttons');
+buttons.innerHTML = `<button type='submit' class="btn btn-outline-warning mx-4" onclick="cancel()">Cancel</button> <button type='submit' class="btn btn-outline-success mx-4" onclick="submit()">Submit</button>` ;
+  
+  }
+  function cancel() {
+var buttons = document.getElementById('buttons');
+buttons.innerHTML = `<button class="btn btn-outline-primary" onclick="edit()">Edit</button>` ;
+for (let i = 0; i < input.length; i++) {
+  input[i].setAttribute('readonly');
+  }
+}
+  
+  function submit() {
+var buttons = document.getElementById('buttons');
+buttons.innerHTML = `<button class="btn btn-outline-primary" onclick="edit()">Edit</button>` ;
+for (let i = 0; i < input.length; i++) {
+  input[i].setAttribute('readonly');
+  }
+}
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
