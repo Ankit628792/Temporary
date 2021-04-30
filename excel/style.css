@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.menu, .sheets{
+    height: 30px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+.menu-options{
+    border: 1px solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.address-content{
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+}
+input{
+    min-width: 50px;
+    height: 80%;
+    margin: 0 5px;
+    padding: 3px;
+}
+.cells-content{
+    height: calc( 100vh - 150px);
+    overflow: auto;
+    position: relative;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.cell{
+    border: 1px solid;
+    min-width: 100px;
+    min-height: 30px;
+    max-width: 100px;
+    padding: 3px;
+}
+.top-left-cell{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    z-index: 5;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+.top-row{
+display: flex;
+background: aquamarine;
+position: absolute;
+top: 0;
+left: 30px;
+z-index: 3;
+}
+.top-row-cell{
+border: 1px solid;
+min-height: 30px;
+min-width: 100px;
+display: grid;
+place-items: center;
+}
+.left-col{
+    background-color: aquamarine;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 3;
+}
+.left-col-cell{
+    width: 30px;
+    height: 30px;
+    border: 1px;
+    display: grid;
+    place-items: center;
+    border: 1px solid;
+}
+
+.cells{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
