@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;family=Raleway:wght@400;500;600&amp;family=Roboto+Slab:wght@300;400&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;family=Raleway:wght@400;500;600&amp;family=Roboto+Slab:wght@300;400&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
@@ -239,6 +238,7 @@
             height: 100%;
             background: #03a9f4;
             border-radius: 10px;
+            animation: animate 2s linear;
         }
 
         .interest ul {
@@ -257,6 +257,18 @@
             color: #03a9f4;
             font-size: 18px;
             width: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            100% {
+                visibility: visible;
+                opacity: 1;
+            }
         }
 
         @media(max-width: 991px) {
