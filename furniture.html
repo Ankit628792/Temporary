@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .right-menu li {
+            display: inline-block;
+            margin-top: 30px !important;
+        }
+
+        .right-menu li .fa {
+            font-size: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .navbar-brand img {
+            width: 160px;
+            border-radius: 50%;
+        }
+
+        .navbar-brand {
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+
+
+        .navbar {
+            padding: 0 35px !important;
+            font-size: 20px;
+            background-color: #fff;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .navbar-toggler .fa {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .banner-img {
+            margin: 0 115px;
+            margin-top: 80px;
+            width: 60%;
+        }
+
+        .banner-img img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .banner {
+            position: relative;
+        }
+
+        .banner-title {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+        }
+
+        .banner-title h1 {
+            font-size: 55px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            line-height: 70px;
+            padding: 20px 50px;
+            text-transform: uppercase;
+        }
+
+        .furniture-box {
+            margin: 80px 0;
+        }
+
+        .title-style h1 {
+            padding: 40px 0;
+        }
+
+        .title-style {
+            margin: 0 auto 80px;
+            height: 120px;
+            width: 80%;
+            max-width: 700px;
+            background: #fff;
+            position: relative;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 50, .5);
+        }
+
+        .title-style::after {
+            content: '';
+            height: 100px;
+            width: 200px;
+            background-color: #b75b6d;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        .title-style::before {
+            content: '';
+            height: 100px;
+            width: 200px;
+            background-color: #b75b6d;
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            z-index: -1;
+        }
+
+        .trending-img {
+            position: relative;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .trending-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn-buy {
+            width: 150px;
+            padding: 10px 0;
+            outline: none !important;
+            border: none;
+            border-radius: 2px;
+            position: absolute;
+            background: #fff;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            transition: 0.6s;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .trending-img:hover .btn-buy {
+            transform: translate(-50%, 50%);
+            bottom: 50%;
+            opacity: 1;
+        }
+
+        .overlay {
+            height: 0;
+            width: 100%;
+            background: #333;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .trending-img:hover .overlay {
+            opacity: 0.5;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .offer {
+            background-image: url(https://image.freepik.com/free-photo/interior-wall-with-green-plant-shelf-3d-rendering_41470-3486.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .row {
+            margin: initial !important;
+        }
+
+        .subscribe {
+            max-width: 500px;
+            margin-top: 0px;
+            padding: 60px;
+            background: #ffff8c;
+            margin-bottom: 20px;
+        }
+
+        .subscribe a {
+            width: 100px;
+            display: block;
+            color: #fff !important;
+            background: #000;
+            text-decoration: none !important;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .offer img {
+            width: 300px;
+            height: 400px;
+            margin: -100px;
+            margin-top: 150px;
+        }
+
+        .furniture-blog {
+            margin: 0;
+        }
+
+        .blog-img {
+            margin-top: 50px;
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .furniture-blog a {
+            color: #666;
+        }
+
+        .furniture-blog a:hover {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .furniture-blog p {
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .brand-logo {
+            width: 250px;
+            height: 200px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 50px auto 30px;
+            box-shadow: 0 2px 40px 0 rgba(110, 130, 208, .18);
+            filter: grayscale(1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .brand-logo:hover {
+            filter: grayscale(0);
+            box-shadow: 2px 2px 17px rgba(110, 130, 208, .18);
+        }
+
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .furniture-brands p {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 150px;
+            background: #f5f6fc;
+        }
+
+        .payment,
+        .insta-img,
+        .app-download {
+            margin: 50px auto;
+        }
+
+        .payment img {
+            width: 300px;
+            cursor: pointer;
+        }
+
+        .insta-img {
+            width: 300px;
+            cursor: pointer;
+        }
+
+        .insta-img img {
+            width: 75px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .insta-img img:hover {
+            transition: 0.5s;
+            transform: scale(1.2);
+        }
+
+        .app-download img {
+            width: 200px;
+        }
+
+        .footer h5 {
+            margin-bottom: 30px;
+        }
+
+        .footer h5::before {
+            content: '';
+            width: 70px;
+            height: 3px;
+            background: #4f74e8;
+            top: 80px;
+            position: absolute;
+        }
+
+        .footer-icons {
+            text-align: right;
+        }
+
+        .footer-icons .fa {
+            margin: 0 10px auto;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        section {
+            padding-top: 100px;
+        }
+
+        #header {
+            padding-top: 0;
+        }
+
+        /*For smaler device*/
+
+        @media(max-width: 991px) {
+            .navbar-brand {
+                right: 75px;
+                top: 0;
+                position: absolute;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            .banner-img {
+                margin: auto;
+                margin-top: 100px;
+                width: 90%;
+            }
+
+            .banner-title {
+                top: 200px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+            }
+
+            .banner-title h1 {
+                font-size: 34px;
+                text-align: center;
+                padding: 20px 5px;
+                line-height: 20px;
+            }
+
+            .title-style h1 {
+                font-size: 30px;
+            }
+
+            .offer img {
+                margin-top: 20px !important;
+                margin-bottom: 0 !important;
+            }
+
+            .insta-img {
+                margin: auto;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer-icons {
+                text-align: center;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            .copyright {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="header" id="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-evenly">
+            <a class="navbar-brand" href="/">
+                <img class="img-fluid" src="https://naldzgraphics.net/wp-content/uploads/2012/01/14-furnituretown.jpg"
+                    alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2 underline">
+                        <a class="nav-link" href="#header">Home</a>
+                    </li>
+                    <li class="nav-item mx-2 underline">
+                        <a class="nav-link" href="#newArrival">New Arrival</a>
+                    </li>
+                    <li class="nav-item mx-2 underline">
+                        <a class="nav-link" href="#category">Category</a>
+                    </li>
+                    <li class="nav-item mx-2 underline">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                </ul>
+                <ul class="right-menu ml-auto">
+                    <li><i class="fa fa-facebbok"></i></li>
+                    <li><i class="fa fa-instagram"></i></li>
+                    <li><i class="fa fa-pinterest"></i></li>
+                    <li>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="banner">
+            <div class="banner-img">
+                <img class="img-fluid"
+                    src="https://images.unsplash.com/photo-1584798448292-5e7ba13a0826?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
+                    alt="">
+            </div>
+            <div class="banner-title">
+                <h1>Furniture Store</h1>
+                <h1>Home's Lifestyle </h1>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--   Furniture Trends-->
+    <section class="furniture-trends">
+        <div class="container">
+            <div class="furniture-box">
+                <div class="title-style text-center">
+                    <h1>Furniture Trends</h1>
+                </div>
+                <p class="text-center">We are committed to offering our customers the widest range in home furniture
+                    like tables, sofas, chairs for living room as well as beds, sofa set, wardrobes, side tables,
+                    dressing tables for bedroom and crockery cabinets, chest of drawers for kitchen especially in solid
+                    wood and sheesham furniture designs, so that it is easy and hassle free to buy furniture online.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Mas_furniture_web_05022021_1.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii3.pepperfry.com/media/wysiwyg/banners/Mas_furniture_web_05022021_2.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/Mas_furniture_web_05022021_3.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Spotlight-->
+    <section class="furniture-brands">
+        <div class="title-style text-center">
+            <h1>In The Spotlight</h1>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="brand-logo shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/01_spotlightdeals_22082019_furniture.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="brand-logo shadow">
+                        <img class="img-fluid"
+                            src="https://ii3.pepperfry.com/media/wysiwyg/banners/web_furniture_01_4092019.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="brand-logo shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/03_spotlightdeals_22082019_furniture.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="brand-logo shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/04_spotlightdeals_22082019_furniture.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--   New Arrivals-->
+    <section class="furniture-trends" id="newArrival">
+        <div class="container">
+            <div class="furniture-box">
+                <div class="title-style text-center">
+                    <h1>New Arrivals</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii3.pepperfry.com/media/wysiwyg/banners/Na_furniture_web_05022021_1.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Shoe Racks</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/Na_furniture_web_05022021_2.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Beds</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Na_furniture_web_05022021_3.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>End Tables</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/Fc_furniture_web_05022021_1.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Study Tables</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/Fc_furniture_web_05022021_1.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Stylish Tables</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Fc_furniture_web_05022021_2.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Sofas</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii3.pepperfry.com/media/wysiwyg/banners/Fc_furniture_web_05022021_3.jpg"
+                            alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Designer Table</h5>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Furniture_clp_nav_2x_06.jpg" alt="">
+                        <button type="button" class="btn-buy">Buy Now</button>
+                        <div class="overlay"></div>
+                    </div>
+                    <h5>Featured Beds</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--   Offer-->
+    <section class="offer">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img class="img-fluid shadow-lg"
+                    src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXN8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="subscribe shadow-lg">
+                    <h4>Furniture Exclusive</h4>
+                    <p>Shop online for Furniture, Home Decor, Furnishings, Kitchenware, Dining Products at best prices.
+                        <br> ☆Upto 40% Off, ☆Fast Shipping, ☆High Quality, ☆Premium, ☆Luxury furniture to beautify your
+                        ☆bedroom, ☆kitchen, ☆dining room, ☆living and ☆outdoor space ☆Free Assembly ☆Safe Shipping.
+                    </p>
+                    <a href=""> Subscribe </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--   Category-->
+    <section class="furniture-trends" id="category">
+        <div class="container">
+            <div class="furniture-box">
+                <div class="title-style text-center">
+                    <h1>Furniture Category</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/Contemporary_27082019.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid" src="https://ii2.pepperfry.com/media/wysiwyg/banners/modern_27082019.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii3.pepperfry.com/media/wysiwyg/banners/midcentury_27082019.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="trending-img shadow">
+                        <img class="img-fluid"
+                            src="https://ii1.pepperfry.com/media/wysiwyg/banners/industrial_27082019.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Latest Blogs -->
+    <section class="furniture-blog" id="blogs">
+        <div class="title-style text-center">
+            <h1>Latest Blogs</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <a href="https://blog.inmod.com/?p=13830">
+                        <div class="blog-img shadow">
+                            <img class="img-fluid"
+                                src="https://blog.inmod.com/wp-content/uploads/2019/07/Back-to-College-2-600x600.jpg"
+                                alt="">
+                        </div>
+                        <p>Turning Your Empty Nest Into the Home Office You’ve Always Dreamed Of</p>
+                    </a>
+
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="https://blog.inmod.com/?p=13801">
+                        <div class="blog-img shadow">
+                            <img class="img-fluid"
+                                src="https://blog.inmod.com/wp-content/uploads/2019/06/Fathers-Day-600x600.png" alt="">
+                        </div>
+                        <p>5 Great Tips on Decorating Your Man Cave</p>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="https://blog.inmod.com/?p=13778">
+                        <div class="blog-img shadow">
+                            <img class="img-fluid"
+                                src="https://blog.inmod.com/wp-content/uploads/2019/05/celesteescaraga-600x750.png"
+                                alt="">
+                        </div>
+                        <p>What Do You Look For When Attending an Open House ?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--        Footer-->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="payment">
+                        <h5>Payment Gate Ways</h5>
+                        <img class="img-fluid"
+                            src="https://speckyboy.com/wp-content/uploads/2016/02/free-payment-method-gateway-icon-sets-03.png">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="insta-img">
+                        <h5>Instagram Pics</h5>
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1616627440455-9907b864b144?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1491926626787-62db157af940?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1586158291800-2665f07bba79?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1609798310302-2cd56312db02?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXN8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1588714306299-aca44edf20de?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGZ1cm5pdHVyZXN8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                        <img class="img-fluid"
+                            src="https://images.unsplash.com/photo-1618377384716-462f06a61706?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlc3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="app-download">
+                        <h5>Download Mobile app</h5>
+                        <img class="img-fluid" src="https://www.ulcdn.net/media/badges/play_store/google-play-badge.png"
+                            alt="">
+                        <img class="img-fluid" src="https://www.ulcdn.net/media/badges/app_store/app_store_badge.svg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="copyright"> Designed with <i class="fa fa-heart"> </i> by AK</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-icons">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
